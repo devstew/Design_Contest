@@ -1,0 +1,21 @@
+{
+  "name": "proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "y"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-iconfont-css": "^2.3.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-tinypng-compress": "^1.2.1",
+    "tiny-compress": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-iconfont": "^10.0.2"
+  }
+}

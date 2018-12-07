@@ -1,0 +1,77 @@
+.header_bottom_shadow{
+  position: relative;
+  box-shadow: 2px 2px 5px #bbb;
+}
+
+.error_banner {
+  @include flex(center, row nowrap, center);
+  @include background(('../images/banner_bg.png'), cover);
+
+  height: 150px;
+
+  &_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+}
+
+
+.error{
+  @include centering(770px);
+  @include flex(center, column nowrap,center);
+
+  margin-top: 138px;
+  margin-bottom: 140px;
+
+  &_img{
+    margin-bottom: 40px;
+  }
+
+  &_title{
+    @include font(28px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+
+  &_description{
+    @include font(14px,25px,'Lato-Regular');
+
+    color: $error_description;
+    text-align:center;
+    margin-bottom: 40px;
+
+    span{
+      display: block;
+    }
+  }
+}
+
+.search{
+
+  &_form{
+    @include flex(center,row nowrap,center);
+
+    width: 100%;
+    border: 1px solid $error_search_border;
+  }
+
+  &_field{
+    @include font(14px, 48px, 'Lato-Regular');
+
+    color: $error_description;
+    width: 600px;
+    padding:0 17px
+  }
+
+  &_submit{
+    @include font(14px, 48px,'Lato-Bold');
+
+    color: $white1;
+    text-align: center;
+    background: $logo_text_color2;
+    padding: 0 55px;
+  }
+}

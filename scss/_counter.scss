@@ -1,0 +1,43 @@
+.counter {
+  @include flex(center, row nowrap, center);
+  @include background('../images/counter_bg.png');
+
+  height: 231px;
+
+  &_content {
+
+    @include centering(1170px);
+  }
+
+  &_list {
+    @include flex(space-around, row nowrap, center);
+
+    width: 100%;
+  }
+
+  &_value {
+    @include font(40px, normal, 'Lato-Bold');
+
+    color: $white1;
+    text-align: center;
+    position: relative;
+    margin-bottom: 56px;
+
+    &:after {
+      content: '';
+      width: 30px;
+      position: absolute;
+      bottom: -16px;
+      left: 40%;
+      border-top: 3px solid $footer_social_hover;
+    }
+  }
+
+  &_name {
+    @include font(16px, normal, 'Lato-Bold');
+
+    color: $white1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

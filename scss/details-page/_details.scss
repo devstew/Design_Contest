@@ -1,0 +1,104 @@
+.details_banner {
+  @include flex(center, row nowrap, center);
+  @include background(('../images/banner_bg.png'), cover);
+
+  height: 150px;
+
+  &_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+}
+
+.details {
+  background: $white1;
+
+  &_content {
+    @include flex(center, column nowrap, center);
+    @include centering(1170px);
+
+    padding: 100px 0;
+  }
+
+  &_describe {
+    @include flex(center, row nowrap, flex-start);
+
+  }
+
+  &_slider_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &_slider_image{
+    position: relative;
+
+
+    & .slick-prev{
+      position:absolute;
+      top:45%;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      background: $logo_text_color2;
+      transform: rotate(180deg);
+    }
+
+    & .slick-next{
+      position:absolute;
+      top:45%;
+      right: 0;
+      width: 35px;
+      height: 35px;
+      background: $logo_text_color2;
+      line-height: 35px;
+
+    }
+
+    & .slider_icon_prev{
+      color: $white1;
+
+    }
+
+    & .slider_icon_next{
+      color: $white1;
+
+    }
+  }
+
+  &_description_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &_description_heading {
+    @include font(18px, normal, 'Exo-SemiBold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  &_description_text {
+    @include font(14px, normal, 'Lato-Regular');
+
+    color: $error_description;
+  }
+
+  &_description {
+    padding-left: 30px;
+
+    p {
+      margin-bottom: 25px;
+    }
+  }
+
+}

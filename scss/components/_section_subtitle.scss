@@ -1,0 +1,7 @@
+.section_subtitle{
+  @include font(16px,normal,'Lato-Regular');
+
+  color: $testimonials_text;
+  font-weight: 400;
+  margin:52px 0 60px;
+}

@@ -1,0 +1,92 @@
+.about {
+
+  background: $white1;
+
+  &_content {
+    @include flex(center, column nowrap, center);
+    @include centering(1170px);
+
+    padding: 100px 0 80px 0;
+  }
+
+  &_title {
+    position: relative;
+    &:after {
+      content: '';
+      width: 30px;
+      position: absolute;
+      bottom: -16px;
+      left: 44%;
+      border-top: 3px solid $footer_social_hover;
+    }
+  }
+
+  &_list_wrapper {
+    width: 100%;
+  }
+
+  &_list {
+    @include flex(center, row wrap, center);
+  }
+
+  &_item {
+    @include flex(center, column nowrap, center);
+
+    height: 225px;
+    width: 28.373%;
+    margin: 29px;
+
+    &:nth-child(2n) {
+      background: $about_item_bg;
+      border: 1px solid $about_item_border;
+
+    }
+
+    &:hover {
+      background: $about_item_bg;
+      box-shadow: 1px 1px 25px #ddd;
+      border: 0px;
+      z-index: 99;
+    }
+  }
+
+  &_icon {
+    font-size: 62px;
+    color: $about_icon_color;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 30px;
+      position: absolute;
+      bottom: -10px;
+      left: 25%;
+      border-top: 2px solid $about_icon_after;
+    }
+  }
+
+  &_item_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+    margin-top: 41px;
+  }
+}
+
+.about_categories_link {
+  @include font(14px, 50px, 'Lato-Bold');
+
+  color: $white1;
+  text-transform: uppercase;
+  padding: 0 38px;
+  background: $logo_text_color2;
+  margin-top: 40px;
+
+  &:hover {
+    color: $logo_text_color2;
+    background: $white1;
+    outline: 3px solid $logo_text_color2;
+    transition: all .4s ease-in;
+  }
+}

@@ -1,0 +1,202 @@
+.header {
+
+  &_top {
+    background: $header_top_bg;
+  }
+
+  &_top_content {
+    @include flex(space-between, row nowrap, center);
+    @include centering(1170px);
+
+  }
+
+  &_social_list {
+    @include flex(center, row nowrap, center);
+
+  }
+
+  &_social_item {
+    margin-right: 21px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &_social_link {
+    font-size: 15px;
+    line-height: 45px;
+    color: $header_top_social;
+    transition: all .4s ease-in;
+
+    &:hover {
+      color: $header_top_social_hov;
+    }
+  }
+
+  &_contact_info {
+    @include flex(center, row nowrap, center);
+
+    p {
+      padding: 0 20px;
+    }
+  }
+
+  &_contact_email {
+    @include font(14px, normal, 'Lato-Regular');
+
+    color: $header_top_social;
+
+    & .icon-message {
+      line-height: 45px;
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+  }
+
+  &_contact_phone {
+    @include font(14px, normal, 'Lato-Regular');
+
+    color: $header_top_social;
+    border-left: 1px solid $header_address_separator;
+    & .icon-phone {
+      margin: 0 10px;
+    }
+  }
+
+  &_bottom_content {
+    @include flex(space-between, row nowrap, center);
+    @include centering(1170px);
+  }
+
+  &_logo_link {
+    @include flex(center, row nowrap, center);
+
+    margin: 25px 0;
+  }
+
+  &_logo_img {
+    width: 75px;
+    height: 60px;
+  }
+
+  &_logo_text {
+    @include font(24px, normal, 'Exo-Bold');
+
+    color: $logo_text_color1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-left: -5px;
+
+    & .red_text {
+      color: $logo_text_color2;
+    }
+  }
+
+  &_nav {
+    margin-left: 70px;
+    margin-right: 100px;
+
+    &_list {
+      @include flex(center, row nowrap, center);
+    }
+
+    &_item {
+      @include flex(center, row nowrap, center);
+
+      position: relative;
+      margin-right: 48px;
+      height: 50px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    & .header_nav_categories:hover .categories_list {
+      display: block;
+
+    }
+
+    & .header_nav_categories:hover .header_link_arrow {
+      color: $logo_text_color2;
+    }
+
+    &_link {
+      @include font(14px, normal, 'Lato-Regular');
+
+      color: $logo_text_color1;
+      text-transform: uppercase;
+      transition: all .4s ease-in;
+      white-space: nowrap;
+
+      &:hover {
+        color: $logo_text_color2;
+      }
+    }
+
+    & .header_link_arrow {
+      margin: 0 5px;
+      color: $logo_text_color1;
+      font-size: 7px;
+      transform: rotate(90deg);
+      transition: all .4s ease-in;
+    }
+  }
+
+  & .header_profile_info {
+    @include flex(center, row nowrap, center);
+
+    & .header_profile_messages {
+      position: relative;
+      font-size: 18px;
+      color: $easy_text;
+      margin-right: 15px;
+
+      &:after {
+        content: '1';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+        line-height: 20px;
+        vertical-align: middle;
+        text-align: center;
+        top: -10px;
+        right: -12px;
+        background: $logo_text_color1;
+        color: $white1;
+        border-radius: 10px;
+      }
+    }
+
+    & .header_profile_notifications {
+      position: relative;
+      font-size: 18px;
+      color: $easy_text;
+
+      &:after {
+        content: '3';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+        line-height: 20px;
+        vertical-align: middle;
+        text-align: center;
+        top: -10px;
+        right: -12px;
+        background: $logo_text_color2;
+        color: $white1;
+        border-radius: 10px;
+      }
+    }
+
+    & .header_profile_photo {
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  }
+
+}

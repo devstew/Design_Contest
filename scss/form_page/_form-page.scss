@@ -1,0 +1,95 @@
+.form_banner {
+  @include flex(center, row nowrap, center);
+  @include background(('../images/banner_bg.png'), cover);
+
+  height: 150px;
+
+  &_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+}
+
+.form_contest {
+
+  background: $white1;
+
+  &_content {
+    @include flex(center, column nowrap, center);
+    @include centering(1170px);
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  &_title {
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 30px;
+      position: absolute;
+      bottom: -16px;
+      left: 44%;
+      border-top: 3px solid $footer_social_hover;
+    }
+  }
+
+  &_heading {
+    @include font(20px, normal, 'Exo-Bold');
+
+    align-self: flex-start;
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+
+  &_form {
+    @include flex(flex-start, row wrap, center);
+  }
+
+  &_field {
+    width: 50%;
+    height: 50px;
+    padding: 0 20px;
+    margin: 15px 0;
+    color: $form_input;
+  }
+
+  &_select {
+    width: 50%;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    color: $form_input;
+    margin: 15px 0;
+    padding: 0 15px;
+  }
+
+  &_message {
+    @include font(14px, normal, 'Lato-Regular');
+    width: 100%;
+    height: 300px;
+    background: transparent;
+    border: 0;
+    color: $form_input;
+    padding: 0 15px;
+    margin: 15px 0 0 0;
+  }
+
+  .form_contest_category {
+    width: 100%;
+    background: transparent;
+    border: 0;
+  }
+
+  &_submit {
+    @include font(14px, 50px, 'Lato-Bold');
+
+    color: $white1;
+    text-transform: uppercase;
+    background: $logo_text_color2;
+    padding: 0 42px;
+  }
+}

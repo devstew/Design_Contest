@@ -1,0 +1,102 @@
+.examples {
+
+  background: $examples_bg;
+
+  &_content {
+    @include flex(center, column nowrap, center);
+    @include centering(1170px);
+
+    padding: 80px 0;
+  }
+
+  &_title {
+    align-self: flex-start;
+    margin-bottom: 59px;
+  }
+
+  &_subtitle {
+    @include font(16px, normal, 'Lato-Regular');
+
+    color: $testimonials_text;
+    font-weight: 400;
+    margin: 52px 0 60px;
+  }
+
+  &_list {
+    @include flex(center, row wrap, center);
+
+    font-size: 0;
+  }
+
+  &_item {
+    position: relative;
+    width: 25%;
+
+    &:hover .examples_details {
+      display: flex;
+    }
+    &:hover .examples_icon {
+      display: flex;
+    }
+  }
+
+  .examples_icon {
+    display: none;
+    font-size: 20px;
+    top: 35%;
+    left: 48%;
+    position: absolute;
+    z-index: 99;
+    color: $logo_text_color2;
+  }
+
+  &_details {
+    @include flex(center, row nowrap, center);
+
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    &_price {
+      @include font(14px, 40px, 'Lato-Bold');
+
+      color: $white1;
+      text-transform: uppercase;
+      background: $examples_details_bg;
+      width: 50%;
+      text-align: center;
+      border-right: 1px solid $white1;
+
+    }
+
+    &_qty {
+      @include font(14px, 40px, 'Lato-Bold');
+
+      color: $white1;
+      text-transform: uppercase;
+      background: $examples_details_bg;
+      width: 50%;
+      text-align: center;
+    }
+  }
+
+  .examples_browse_link {
+    @include font(14px, 50px, 'Lato-Bold');
+
+    color: $white1;
+    text-transform: uppercase;
+    background: $logo_text_color2;
+    padding: 0 37px;
+    margin-top: 60px;
+
+    &:hover {
+      color: $logo_text_color2;
+      background: $white1;
+      outline: 3px solid $logo_text_color2;
+      transition: all .4s ease-in;
+    }
+  }
+
+}

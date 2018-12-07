@@ -1,0 +1,50 @@
+.banner {
+  @include flex(center, row nowrap, center);
+  @include background(('../images/banner_bg.png'), cover);
+
+  height: 695px;
+  margin-top: -115px;
+
+  &_content {
+    @include centering(1170px);
+    @include flex(center, column nowrap, center);
+  }
+
+  &_logo {
+    position: relative;
+    width: 85px;
+    height: 60px;
+    margin: 40px;
+
+    &:after {
+      content: '';
+      width: 30px;
+      position: absolute;
+      bottom: -40px;
+      left: 44%;
+      border-top: 3px solid $footer_social_hover;
+    }
+  }
+
+  .banner_title {
+    font-size: 40px;
+    margin: 40px 0 70px;
+  }
+
+  &_link {
+    @include font(14px, 56px, 'Lato-Bold');
+
+    color: $white1;
+    text-transform: uppercase;
+    padding: 0 49px;
+    background: $logo_text_color2;
+    margin-top: 40px;
+
+    &:hover {
+      color: $logo_text_color2;
+      background: $white1;
+      outline: 3px solid $logo_text_color2;
+      transition: all .4s ease-in;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+.need_banner {
+  @include flex(center, row nowrap, center);
+  @include background(('../images/banner_bg.png'), cover);
+
+  height: 150px;
+
+  &_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+}
+
+.need_content {
+  @include flex(center, column nowrap, center);
+  margin-top: 100px;
+}
+
+.need_flex {
+
+  &_content {
+    @include centering(1170px);
+
+    padding: 80px 0;
+
+  }
+
+  &_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+
+  &_subtitle {
+    @include font(14px, normal, 'Lato-Regular');
+
+    color: $error_description;
+    font-weight: 400;
+    margin-bottom: 37px;
+  }
+
+  &_list {
+    @include flex(space-between, row wrap, center);
+
+  }
+
+  & .need_tick{
+    display: none;
+    font-size:20px;
+    color: $white1;
+  }
+
+  &_item {
+    position: relative;
+    width: 31.623%;
+    margin-bottom: 29px;
+
+    &:hover .need_tick{
+      display: block;
+      position:absolute;
+      bottom :5%;
+      left: 5%;
+    }
+  }
+}
+
+.need_float {
+  background: $about_item_bg;
+  width: 100%;
+
+  &_content {
+    @include centering(1170px);
+
+    padding: 80px 0;
+  }
+
+  &_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+
+  &_subtitle {
+    @include font(14px, normal, 'Lato-Regular');
+
+    color: $error_description;
+    font-weight: 400;
+    margin-bottom: 37px;
+  }
+
+  &_list {
+    @include clear-fix();
+  }
+
+  & .need_tick{
+    display: none;
+    font-size:20px;
+    color: $white1;
+  }
+
+  &_item {
+    position: relative;
+    width: 31.623%;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 29px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:hover .need_tick{
+      display: block;
+      position:absolute;
+      bottom :5%;
+      left: 5%;
+    }
+  }
+}
+
+.need_inline {
+  width: 100%;
+
+  &_content {
+    @include centering(1170px);
+
+    padding-top: 80px;
+
+  }
+
+  &_title {
+    @include font(20px, normal, 'Exo-Bold');
+
+    color: $about_title_color;
+    text-transform: uppercase;
+  }
+
+  &_subtitle {
+    @include font(14px, normal, 'Lato-Regular');
+
+    color: $error_description;
+    font-weight: 400;
+    margin-bottom: 37px;
+  }
+
+  & .need_tick{
+    display: none;
+    font-size:20px;
+    color: $white1;
+  }
+
+  &_item {
+    position: relative;
+    display: inline-block;
+    width: 31.623%;
+    margin-right: 26px;
+    margin-bottom: 29px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:hover .need_tick{
+      display: block;
+      position:absolute;
+      bottom :5%;
+      left: 5%;
+    }
+  }
+
+}
+
+.save_link_wrapper {
+  @include centering(1170px);
+  @include flex(center, row nowrap, center);
+
+  margin-bottom: 80px;
+
+  & .save_link {
+
+    @include font(14px, 50px, 'Lato-Bold');
+
+    color: $white1;
+    padding: 0 52px;
+    text-transform: uppercase;
+    background: $logo_text_color2;
+    transition: all .4s ease-in;
+
+    &:hover{
+      color: $logo_text_color2;
+      background: $white1;
+      outline: 2px solid $logo_text_color2;
+    }
+  }
+}

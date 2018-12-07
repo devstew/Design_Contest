@@ -1,0 +1,90 @@
+.easy {
+
+  background: $white1;
+
+  &_content {
+    @include flex(center, column nowrap, center);
+    @include centering(1170px);
+
+    padding-top: 80px;
+  }
+
+  &_title {
+    position: relative;
+    &:after {
+      content: '';
+      width: 30px;
+      position: absolute;
+      bottom: -16px;
+      left: 44%;
+      border-top: 3px solid $footer_social_hover;
+    }
+  }
+
+}
+
+.features {
+  @include flex(space-between, row nowrap, flex-start);
+
+  width: 100%;
+  margin-bottom: 78px;
+
+  &_description {
+    align-self: flex-start;
+    padding-right: 36px;
+
+    &_title {
+      @include font(20px, normal, 'Exo-Bold');
+
+      color: $logo_text_color1;
+      text-transform: uppercase;
+    }
+
+    &_text {
+      @include font(16px, 25px, 'Lato-Regular');
+
+      color: $easy_text;
+    }
+  }
+
+  &_list {
+    margin-top: 55px;
+  }
+
+  &_item {
+    @include clear-fix;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &_title {
+    @include font(18px, normal, 'Exo-SemiBold');
+
+    color: $easy_feature_title;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+  }
+
+  &_text {
+    @include font(14px, normal, 'Lato-Regular');
+
+    color: $easy_text;
+  }
+
+  &_icon {
+    float: left;
+    color: $easy_text;
+    font-size: 45px;
+    margin-right: 30px;
+
+  }
+
+  &_video {
+    border: 2px solid $easy_video_border;
+    border-radius: 2px;
+  }
+}

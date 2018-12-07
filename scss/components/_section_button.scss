@@ -1,0 +1,16 @@
+&_link{
+  @include font(14px, 50px,'Lato-Bold');
+
+  color: $white1;
+  text-transform: uppercase;
+  padding: 0 38px;
+  background: $logo_text_color2;
+  margin-top: 40px;
+
+  &:hover{
+    color: $logo_text_color2;
+    background: $white1;
+    outline: 3px solid $logo_text_color2;
+    transition: all .4s ease-in;
+  }
+}

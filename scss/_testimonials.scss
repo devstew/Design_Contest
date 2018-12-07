@@ -1,0 +1,89 @@
+.testimonials {
+
+  background: $white1;
+
+  &_content {
+    @include centering(1170px);
+    @include flex(center, column nowrap, center);
+
+    padding: 80px 0 150px;
+  }
+
+  &_title {
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 30px;
+      position: absolute;
+      bottom: -16px;
+      left: 44%;
+      border-top: 3px solid $footer_social_hover;
+    }
+  }
+
+  &_subtitle {
+    @include font(16px, normal, 'Lato-Regular');
+
+    color: $testimonials_text;
+    font-weight: 400;
+    margin: 52px 0 60px;
+  }
+
+  &_list {
+    @include flex(center, row nowrap, center);
+  }
+
+  &_item {
+    width: 50%;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+  &_text_wrapper {
+    position: relative;
+    background: $testimonials_item_bg;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 47%;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid $testimonials_item_bg;
+      border-bottom: 15px solid transparent;
+    }
+  }
+
+  &_text {
+    @include font(16px, normal, 'Lato-Regular');
+
+    text-align: center;
+    color: $testimonials_text;
+    padding: 40px 33px 30px 33px;
+  }
+
+  &_rating {
+    @include font(14px, normal, 'Lato-Regular');
+
+    color: $testimonials_rating;
+    text-align: center;
+    padding-bottom: 41px;
+  }
+
+  &_author {
+    @include font(14px, normal, 'Lato-Bold');
+
+    color: $testimonials_text;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 34px 0;
+  }
+}

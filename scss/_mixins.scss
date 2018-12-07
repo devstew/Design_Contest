@@ -1,0 +1,100 @@
+@mixin font($size: 14px, $lineHeight: normal, $fontFamily: $mainFont) {
+	font-size: #{$size/$rootFont}rem;
+	line-height: $lineHeight;
+	font-family: $fontFamily;
+}
+
+@mixin font-size($font-size) {
+	font-size: #{$font-size/$rootFont}rem;
+}
+
+@mixin position($position: absolute, $top: 0, $left: 0, $right: auto, $bottom: auto) {
+	position: $position;
+	top: $top;
+	left: $left;
+	right: $right;
+	bottom: $bottom;
+}
+
+@mixin border($size, $color, $radius: 0px) {
+	border: $size solid $color;
+	border-radius: $radius;
+}
+
+@mixin centering_elements() {
+	text-align: center;
+	display: block;
+}
+  
+@mixin centering($max-width: $max-width) {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+@mixin align ($display:inline-block, $vertical-align:top) {
+    display: $display;
+    vertical-align: $vertical-align;
+}
+
+@mixin flex ($justify-content:space-between, $flex-flow:row wrap, $align-items: flex-start) {
+    display: flex;
+	justify-content: $justify-content;
+	flex-flow: $flex-flow;
+    align-items: $align-items;
+}
+
+@mixin background($link, $bg_size: cover){
+	background: url($link) no-repeat;
+	background-size: $bg_size;
+}
+
+@mixin background_sprite($width, $height, $link, $position_side: 0, $position_vertical: 0){
+	width: $width;
+	height: $height; 
+	background:url($link) $position_side $position_vertical;
+	display: block;
+}
+
+@mixin width_calc($width, $max_width){
+	width: $width/$max_width *100%;
+}
+
+@mixin triangle($border_width, $color){
+	border: $border_width solid transparent;
+	border-bottom-color: $color;
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+    transform: translate(-50%);
+}
+
+@mixin transition($option:all, $delay: 0.5s, $approach: ease){
+	transition: $option $delay $approach;
+}
+
+@mixin clear-fix() {
+	&::after {
+	  content: '';
+	  display: block;
+	  width: 100%;
+	  clear: both;
+	}
+  }
+
+@mixin border-top($color: $grey_1, $size: 1px) {
+	border-top: $size solid $color;
+}
+
+
+@mixin border-bottom($color: $grey_1, $size: 1px) {
+	border-bottom: $size solid $color;
+}
+@mixin box-decoration($size: 6px, $color: $purple_rgba) {
+	-webkit-box-shadow: 0px 0px 0px $size $color;
+	-moz-box-shadow: 0px 0px 0px $size $color;
+	box-shadow: 0px 0px 0px $size $color;
+
+}

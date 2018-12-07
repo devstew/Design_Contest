@@ -1,0 +1,6 @@
+.section_title{
+  @include font(28px,normal,'Exo-SemiBold');
+
+  color:$logo_text_color1;
+  text-transform: uppercase;
+}
